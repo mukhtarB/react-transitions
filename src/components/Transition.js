@@ -28,17 +28,25 @@ class TransitionComp extends Component{
                     in={this.state.show}
                     timeout={{
                         enter: 50,
-                        exit: 4000
+                        exit: 3000
                     }}
 
                     // mountOnEnter
                     // unmountOnExit
                     
                     // triggers entering / exiting as true or false
-                    enter={false}
+                    enter={true}
                     exit={false}
 
-                    
+                    // onEnter and onExit only work if enter and exit are true
+                    onEnter = {() => {
+                        console.log('entering')
+                    }}
+
+                    onExit = {() => {
+                        // toggle exit to fasle to see effect
+                        console.log('exiting')
+                    }}
 
                 >
 
