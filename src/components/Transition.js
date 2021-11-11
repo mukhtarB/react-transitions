@@ -39,11 +39,11 @@ class TransitionComp extends Component{
                     exit={false}
 
                     // onEnter and onExit only work if enter and exit are true
-                    onEnter = {() => {
+                    onEnter = {(node) => {
                         console.log('entering')
                     }}
 
-                    onExit = {() => {
+                    onExit = {(node) => {
                         // toggle exit to fasle to see effect
                         console.log('exiting')
                     }}
