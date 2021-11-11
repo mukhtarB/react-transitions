@@ -27,19 +27,23 @@ class TransitionComp extends Component{
                 <Transition
                     in={this.state.show}
                     timeout={2000}
+
+                    // mountOnEnter
+                    // unmountOnExit
+
                 >
 
                     { (transitionState) => 
                          <div style = {{
                             background:'red',
-                            height: '80px', 
+                            height: transitionState === 'exiting' || transitionState === 'exited' ? '0px' : '80px',
                             textAlign: 'center',
                             color: 'cyan',
                             paddingTop: '20px',
                             transition: 'all ease 2s',
                             opacity: transitionState === 'exiting' || transitionState === 'exited' ? 0 : 1,
                             transform: transitionState === 'exiting' || transitionState === 'exited' ? 'translateX(-100%)' : 'unset',
-                            // transform: `translateX(${transitionState === 'exiting' || transitionState === 'exited' ? -100 : 0}%)`
+
                         }}> Transition, <br /> state = {`${this.state.show}`} <br /> trans-state = {transitionState} </div>
                     }
 
