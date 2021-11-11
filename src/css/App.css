@@ -81,6 +81,36 @@
             TRANSITIONS BASIC 
 ========================================*/
 
+.boxed {
+	background-color: deeppink;
+	height: 80px;
+	text-align: center;
+	color: cyan;
+	padding-top: 20px;
+	transition: all ease 2s;
+	opacity: 1;
+}
+
+.boxed.boxed-entering {
+	background-color: darkmagenta;
+	transform: translateX(0%);
+}
+
+/* same as intial declarations */
+/* .boxed.boxed-entered {
+	background-color: deeppink;
+	opacity: 1;
+} */
+
+.boxed.boxed-exiting {
+	background-color: forestgreen;
+}
+
+.boxed.boxed-exited {
+	background-color: darksalmon;
+	opacity: 0;
+	transform: translateX(-100%);
+}
 /*=======================================
             CSSTRANSITIONS
 ========================================*/

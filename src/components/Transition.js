@@ -34,17 +34,12 @@ class TransitionComp extends Component{
                 >
 
                     { (transitionState) => 
-                         <div style = {{
-                            background:'red',
-                            height: transitionState === 'exiting' || transitionState === 'exited' ? '0px' : '80px',
-                            textAlign: 'center',
-                            color: 'cyan',
-                            paddingTop: '20px',
-                            transition: 'all ease 2s',
-                            opacity: transitionState === 'exiting' || transitionState === 'exited' ? 0 : 1,
-                            transform: transitionState === 'exiting' || transitionState === 'exited' ? 'translateX(-100%)' : 'unset',
-
-                        }}> Transition, <br /> state = {`${this.state.show}`} <br /> trans-state = {transitionState} </div>
+                        <div className = {`boxed boxed-${transitionState}`}> 
+                            Transition, <br /> 
+                            state = {`${this.state.show}`} <br /> 
+                            trans-state = {transitionState} 
+                            {console.log(transitionState)}
+                        </div>
                     }
 
                 </Transition>
