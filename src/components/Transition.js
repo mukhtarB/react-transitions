@@ -34,13 +34,14 @@ class TransitionComp extends Component{
                             background:'red',
                             height: '80px', 
                             textAlign: 'center',
-                            color: 'cyan'
+                            color: 'cyan',
+                            paddingTop: '20px'
                         }}> Transition, <br /> state = {`${this.state.show}`} <br /> trans-state = {transitionState} </div>
                     }
 
                 </Transition>
                     
-                <button onClick = {this.toggleDiv}> Toggle show / hide </button>
+                <button onClick = {this.toggleDiv} className = 'showDiv'> Toggle show / hide </button>
             </div>
 
         )

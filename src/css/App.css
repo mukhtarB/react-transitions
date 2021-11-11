@@ -72,6 +72,9 @@
 	padding: 10px 20px;
 	display: inline-block;
 	cursor: pointer;
+	border: 1px solid grey;
+	margin-top: 5px;
+	margin-left: 5px;
 }
 
 /*=======================================
