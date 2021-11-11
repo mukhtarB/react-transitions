@@ -26,10 +26,27 @@ class TransitionComp extends Component{
                 {/* takes in props of in and timeout */}
                 <Transition
                     in={this.state.show}
-                    timeout={2000}
+                    timeout={{
+                        enter: 50,
+                        exit: 3000
+                    }}
 
                     // mountOnEnter
                     // unmountOnExit
+                    
+                    // triggers entering / exiting as true or false
+                    enter={true}
+                    exit={false}
+
+                    // onEnter and onExit only work if enter and exit are true
+                    onEnter = {(node) => {
+                        console.log('entering')
+                    }}
+
+                    onExit = {(node) => {
+                        // toggle exit to fasle to see effect
+                        console.log('exiting')
+                    }}
 
                 >
 
@@ -38,7 +55,7 @@ class TransitionComp extends Component{
                             Transition, <br /> 
                             state = {`${this.state.show}`} <br /> 
                             trans-state = {transitionState} 
-                            {console.log(transitionState)}
+                            {/* {console.log(transitionState)} */}
                         </div>
                     }
 
