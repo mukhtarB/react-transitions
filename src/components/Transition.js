@@ -33,6 +33,12 @@ class TransitionComp extends Component{
 
                     // mountOnEnter
                     // unmountOnExit
+                    
+                    // triggers entering / exiting as true or false
+                    enter={false}
+                    exit={false}
+
+                    
 
                 >
 
