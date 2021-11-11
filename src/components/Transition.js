@@ -26,7 +26,10 @@ class TransitionComp extends Component{
                 {/* takes in props of in and timeout */}
                 <Transition
                     in={this.state.show}
-                    timeout={2000}
+                    timeout={{
+                        enter: 50,
+                        exit: 4000
+                    }}
 
                     // mountOnEnter
                     // unmountOnExit
@@ -38,7 +41,7 @@ class TransitionComp extends Component{
                             Transition, <br /> 
                             state = {`${this.state.show}`} <br /> 
                             trans-state = {transitionState} 
-                            {console.log(transitionState)}
+                            {/* {console.log(transitionState)} */}
                         </div>
                     }
 
