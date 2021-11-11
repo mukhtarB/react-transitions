@@ -115,6 +115,21 @@
             CSSTRANSITIONS
 ========================================*/
 
+.boxed.boxed-enter-active {
+	background-color: darkmagenta;
+	transform: translateX(0%);
+}
+
+.boxed.boxed-exit-active {
+	background-color: forestgreen;
+}
+
+.boxed.boxed-exit-done {
+	background-color: darksalmon;
+	opacity: 0;
+	transform: translateX(-100%);
+}
+
 /*=======================================
             TRANSITIONS GROUP 
 ========================================*/
