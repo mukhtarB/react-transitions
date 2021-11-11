@@ -4,9 +4,11 @@ import '../css/App.css';
 class TransitionComp extends Component{
 
     render(){
+
         return(
             <div>
-                Transition
+                <div> Transition </div>
+                <button> Toggle show / hide </button>
             </div>
 
         )
