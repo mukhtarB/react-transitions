@@ -36,6 +36,11 @@
 	padding: 10px;
 }
 
+.item-list {
+	list-style: none;
+	padding-left: 0;
+}
+
 .btns {
 	margin-top: 20px;
 }

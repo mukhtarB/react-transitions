@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TransitionGroup } from 'react-transition-group';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import '../css/App.css';
 
 class Slide extends Component{
@@ -9,7 +9,9 @@ class Slide extends Component{
     
     generateElements () {
         return this.state.items.map((item,i) => (
-            <li className="item" key={i}>{item}</li>
+            <CSSTransition>
+                <li className="item" key={i}>{item}</li>
+            </CSSTransition>
         ));
     }
 
@@ -32,7 +34,13 @@ class Slide extends Component{
     render(){
         return(
             <div>
-                {this.generateElements()}
+                <TransitionGroup
+                    component='ul'
+                    className='item-list'
+                >
+                    {this.generateElements()}
+                </TransitionGroup>
+                
                 
             
                 <div className="btns">
