@@ -9,7 +9,11 @@ class Slide extends Component{
     
     generateElements () {
         return this.state.items.map((item,i) => (
-            <CSSTransition>
+            <CSSTransition
+                timeout={50}
+                key={i}
+                classNames='item'
+            >
                 <li className="item" key={i}>{item}</li>
             </CSSTransition>
         ));
