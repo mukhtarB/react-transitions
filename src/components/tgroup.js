@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import '../css/App.css';
 
 class Slide extends Component{
@@ -6,15 +7,23 @@ class Slide extends Component{
         items:[]
     }
     
-    addElements () {
+    generateElements () {
         return this.state.items.map((item,i) => (
-            <div className="item" key={i}>{item}</div>
+            <CSSTransition
+                timeout={{
+                    enter: 200,
+                    exit: 2000
+                }}
+                key={i}
+            >
+                <li className="item" key={i}>{item}</li>
+            </CSSTransition>
         ));
     }
 
-    generateNumber(){
+    addNumber(){
         //let random = Math.floor(Math.random() * 100) + 1;
-        let newArray = [...this.state.items,Math.floor(Math.random() * 100) + 1]
+        let newArray = [...this.state.items, Math.floor(Math.random() * 100) + 1]
 
         this.setState({
             items:newArray
@@ -31,10 +40,17 @@ class Slide extends Component{
     render(){
         return(
             <div>
-                {this.addElements()}
-             
+                <TransitionGroup
+                    component='ul'
+                    className='item-list'
+                >
+                    {this.generateElements()}
+                </TransitionGroup>
+                
+                
+            
                 <div className="btns">
-                    <div className="btn-add" onClick={()=> this.generateNumber()}>Add Elements</div>
+                    <div className="btn-add" onClick={()=> this.addNumber()}>Add Elements</div>
                     <div className="btn-remove" onClick={()=> this.removeNumber()}>Remove Elements</div>
                 </div>
             </div>

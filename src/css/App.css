@@ -34,10 +34,20 @@
 	text-align: center;
 	margin-bottom: 1px;
 	padding: 10px;
+	transition: all ease 2s;
+	transform: translateX(-100%);
+}
+
+.item-list {
+	list-style: none;
+	padding-left: 0;
 }
 
 .btns {
 	margin-top: 20px;
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
 }
 
 .btn-add,
@@ -46,6 +56,7 @@
 	color: #fff;
 	text-align: center;
 	padding: 10px;
+	cursor: pointer;
 }
 .btn-remove {
 	background: #f44336;
@@ -133,3 +144,21 @@
 /*=======================================
             TRANSITIONS GROUP 
 ========================================*/
+
+.item.enter-active {
+	background-color: forestgreen;
+	transform: translateX(-85%);
+	/* opacity: 1; */
+}
+
+.item.enter-done {
+	background-color: darkmagenta;
+	transform: translateX(0%);
+	opacity: 1;
+}
+
+.item.exit-active {
+	background-color: darksalmon;
+	transform: translateX(-100%);
+	opacity: 0;
+}
