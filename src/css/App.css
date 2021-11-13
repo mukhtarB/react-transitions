@@ -34,6 +34,8 @@
 	text-align: center;
 	margin-bottom: 1px;
 	padding: 10px;
+	transition: all ease 2s;
+	transform: translateX(-100%);
 }
 
 .item-list {
@@ -142,3 +144,21 @@
 /*=======================================
             TRANSITIONS GROUP 
 ========================================*/
+
+.item.enter-active {
+	background-color: forestgreen;
+	transform: translateX(-85%);
+	/* opacity: 1; */
+}
+
+.item.enter-done {
+	background-color: darkmagenta;
+	transform: translateX(0%);
+	opacity: 1;
+}
+
+.item.exit-active {
+	background-color: darksalmon;
+	transform: translateX(-100%);
+	opacity: 0;
+}
