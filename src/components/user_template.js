@@ -1,6 +1,6 @@
 import React from "react";
 
-const userTemplate = () => {
+const UserTemplate = () => {
     return (
         <div>
             I am user template
@@ -8,4 +8,4 @@ const userTemplate = () => {
     )
 }
 
-export default userTemplate;
+export default UserTemplate;
