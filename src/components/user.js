@@ -14,6 +14,7 @@ class User extends Component {
     render () {
         return (
             <div>
+                From User Component
                 <UserTemplate {...this.state} />
             </div>
         )
