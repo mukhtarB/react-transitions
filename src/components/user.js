@@ -8,7 +8,13 @@ class User extends Component {
     state = {
         name: 'John',
         lastName: 'Blaine',
-        age: 34
+        age: 34,
+        hobbies: [3, 'john', true],
+        spanish: false,
+        car: {brand: 'Ford', model: 'focus-sport'},
+        test_me () {
+            console.log('tested')
+        }
     }
 
     render () {
